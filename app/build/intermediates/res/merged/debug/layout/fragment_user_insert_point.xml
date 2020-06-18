@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_toolbar"
+            app:navigationIcon="@drawable/head_icon_close"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="포인트 적립" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dip" />
+
+                    <TextView
+                        android:id="@+id/tv_insert_point_guide_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="특허청,중소기업청이"
+                        android:textColor="@color/color_0075be"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dip" />
+
+                    <TextView
+                        android:id="@+id/tv_insert_point_guide_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Global 초간편 특화 신기술로 高평가 인증한"
+                        android:textColor="@color/color_0075be"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dip" />
+
+                    <TextView
+                        android:id="@+id/tv_insert_point_guide_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="대한민국  진짜  보너스  포인트"
+                        android:textColor="@color/color_0075be"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dip" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_point_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dip"
+                        android:background="@drawable/border">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dip" />
+
+                    <TextView
+                        android:id="@+id/tv_insert_point_franchisee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/color_e26a85"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dip" />
+
+                    <TextView
+                        android:id="@+id/tv_insert_point_franchisee_sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="에서 제공한"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dip" />
+
+                    <TextView
+                        android:id="@+id/tv_insert_point_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/color_0075be"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dip" />
+
+                    <TextView
+                        android:id="@+id/tv_insert_point_result"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/primaryDark"
+                        android:textSize="26sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dip" />
+
+                    <LinearLayout
+                        android:id="@+id/li_grade_guide"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="10dip"
+                        android:paddingBottom="10dip"
+                        android:background="@drawable/shape">
+
+                        <TextView
+                            android:id="@+id/tv_insert_point_grade_guide"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text = "단말 안내  보너스와 다른 경우는\n2학년(등급) 이상 우대 보너스가 추가된 것임"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dip" />
+
+                    <LinearLayout
+                        android:id="@+id/li_duplicate_guide"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="10dip"
+                        android:paddingBottom="10dip"
+                        android:background="@drawable/shape">
+
+                        <TextView
+                            android:id="@+id/tv_insert_point_duplicate_guide"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text = "현재 사용중인  스마트폰 No.와 가입  당시\n스마트폰 No.(I.D)가 다릅니다.  회원님의 소중한\n보너스가 유실될 수 있으니 지금 즉시 변경해 주세요"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_point_game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:id="@+id/tv_insert_point_game_franchisee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/color_e26a85"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dip" />
+
+                    <TextView
+                        android:id="@+id/tv_insert_point_game_franchisee_sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="에서 제공한"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dip" />
+
+                    <TextView
+                        android:id="@+id/tv_insert_point_game_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/color_0075be"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dip" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="경품게임"
+                            android:textSize="20sp"/>
+
+                        <View
+                            android:layout_width="10dip"
+                            android:layout_height="10dip" />
+
+                        <ImageView
+                            android:id="@+id/iv_insert_point_game_ai"
+                            android:layout_width="100dip"
+                            android:layout_height="100dip"
+                            android:src="@drawable/rotate_rsp_p"/>
+
+                        <View
+                            android:layout_width="10dip"
+                            android:layout_height="10dip" />
+
+                        <TextView
+                            android:id="@+id/tv_insert_point_game_guide"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="가위바위보 게임을 시작합니다.\n시작버튼을 누른 후 3초이내에 아래\n가위바위보를 선택 하십시요."/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp">
+
+                            <Button
+                                android:id="@+id/btn_insert_point_game_start"
+                                android:layout_width="100dip"
+                                android:layout_height="30dip"
+                                android:background="@drawable/rect_toolbar_radius"
+                                android:gravity="center"
+                                android:text="시작"
+                                android:textColor="@color/color_toolbar" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="0dip"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:id="@+id/iv_insert_point_game_user_s"
+                                android:layout_width="80dip"
+                                android:layout_height="80dip"
+                                android:src="@drawable/rsp_r"/>
+
+                            <View
+                                android:layout_width="10dip"
+                                android:layout_height="match_parent" />
+
+                            <ImageView
+                                android:id="@+id/iv_insert_point_game_user_r"
+                                android:layout_width="80dip"
+                                android:layout_height="80dip"
+                                android:src="@drawable/rsp_s"/>
+
+                            <View
+                                android:layout_width="10dip"
+                                android:layout_height="match_parent" />
+
+                            <ImageView
+                                android:id="@+id/iv_insert_point_game_user_p"
+                                android:layout_width="80dip"
+                                android:layout_height="80dip"
+                                android:src="@drawable/rsp_p"/>
+
+                            <View
+                                android:layout_width="0dip"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_insert_point_game_result"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/color_0075be"
+                            android:textSize="26sp"
+                            android:layout_marginTop="10dip"
+                            android:layout_marginBottom="10dip"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View style="@style/line_gray_w" />
+
+            <LinearLayout
+                android:id="@+id/layout_point_bills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border"
+                    android:padding="10dip">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="전자 영수증"
+                        android:textColor="@color/color_0075be"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dip"
+                        android:layout_marginBottom="5dip"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/border">
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="사업자명"
+                                android:textSize="12sp"
+                                android:paddingLeft="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                            <View style="@style/line_gray_w" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="사업자 번호"
+                                android:textSize="12sp"
+                                android:paddingLeft="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                            <View style="@style/line_gray_w" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="거래일시"
+                                android:textSize="12sp"
+                                android:paddingLeft="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                            <View style="@style/line_gray_w" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="거래수단"
+                                android:textSize="12sp"
+                                android:paddingLeft="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                            <View style="@style/line_gray_w" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="공급가액"
+                                android:textSize="12sp"
+                                android:paddingLeft="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                            <View style="@style/line_gray_w" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="부가세"
+                                android:textSize="12sp"
+                                android:paddingLeft="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                            <View style="@style/line_gray_w" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="결제금액"
+                                android:textSize="12sp"
+                                android:paddingLeft="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                            <View style="@style/line_gray_w" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="승인번호"
+                                android:textSize="12sp"
+                                android:paddingLeft="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                        </LinearLayout>
+
+                        <View style="@style/line_gray_h" />
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_weight="2"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_insert_point_check_storename"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text=""
+                                android:textColor="@color/color_999"
+                                android:textSize="12sp"
+                                android:paddingRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                            <View style="@style/line_gray_w" />
+
+                            <TextView
+                                android:id="@+id/tv_insert_point_check_bussiness_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text=""
+                                android:textColor="@color/color_999"
+                                android:textSize="12sp"
+                                android:paddingRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                            <View style="@style/line_gray_w" />
+
+                            <TextView
+                                android:id="@+id/tv_insert_point_check_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text=""
+                                android:textColor="@color/color_999"
+                                android:textSize="12sp"
+                                android:paddingRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                            <View style="@style/line_gray_w" />
+
+                            <TextView
+                                android:id="@+id/tv_insert_point_check_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text=""
+                                android:textColor="@color/color_999"
+                                android:textSize="12sp"
+                                android:paddingRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                            <View style="@style/line_gray_w" />
+
+                            <TextView
+                                android:id="@+id/tv_insert_point_check_cost"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text=""
+                                android:textColor="@color/color_999"
+                                android:textSize="12sp"
+                                android:paddingRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                            <View style="@style/line_gray_w" />
+
+                            <TextView
+                                android:id="@+id/tv_insert_point_check_vat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text=""
+                                android:textColor="@color/color_999"
+                                android:textSize="12sp"
+                                android:paddingRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                            <View style="@style/line_gray_w" />
+
+                            <TextView
+                                android:id="@+id/tv_insert_point_check_paycost"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text=""
+                                android:textColor="@color/color_999"
+                                android:textSize="12sp"
+                                android:paddingRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                            <View style="@style/line_gray_w" />
+
+                            <TextView
+                                android:id="@+id/tv_insert_point_check_confirm_code"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text=""
+                                android:textColor="@color/color_999"
+                                android:textSize="12sp"
+                                android:paddingRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginBottom="5dip"/>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dip" />
+
+            <LinearLayout
+                android:id="@+id/layout_point_leaflet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip"
+                android:background="@drawable/border">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    
+                    <allpointech.touchall.custom.AspectRatioImageView
+                        android:id="@+id/imageview_insertpoint_leaflet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"/>
+                    
+                    
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

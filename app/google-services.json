@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1095509856961",
+    "firebase_url": "https://touchall-allpointec.firebaseio.com",
+    "project_id": "touchall-allpointec",
+    "storage_bucket": "touchall-allpointec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095509856961:android:8ca4476a72438729",
+        "android_client_info": {
+          "package_name": "allpointech.touchall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1095509856961-o53vjh5ad7rlau5tmd00nqh1s6o2v5qb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc7MbwGikD2G6Se-zUlPUMUKdanJhUPAg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

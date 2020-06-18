@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_toolbar"
+            app:navigationIcon="@drawable/head_menu"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="터치올" />
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <FrameLayout
+            android:id="@+id/top_component"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dip">
+                
+                <TextView
+                    android:id="@+id/text_main_hello"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dip"
+                    android:text=""/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dip"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="60dip"
+                        android:layout_height="30dip"
+                        android:gravity="center_vertical"
+                        android:text="My 보너스" />
+
+                    <View
+                        android:layout_width="10dip"
+                        android:layout_height="match_parent" />
+
+                    <me.rishabhkhanna.customtogglebutton.CustomToggleButton
+                        android:id="@+id/button_total_point"
+                        android:layout_width="60dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        app:radius="2dip"
+                        app:uncheckedColor="@color/color_toolbar"
+                        app:checkedColor="@color/color_toolbar"
+                        android:textOn="누적"
+                        android:textOff="누적"
+                        />
+
+                    <View
+                        android:layout_width="10dip"
+                        android:layout_height="match_parent" />
+
+                    <me.rishabhkhanna.customtogglebutton.CustomToggleButton
+                        android:id="@+id/button_canuse_point"
+                        android:layout_width="60dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        app:radius="2dip"
+                        app:uncheckedColor="@color/color_toolbar"
+                        app:checkedColor="@color/color_toolbar"
+                        android:textOn="가용"
+                        android:textOff="가용"
+                        />
+
+                    <!--<ToggleButton-->
+                        <!--android:layout_width="60dip"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textOn="누적"-->
+                        <!--android:textOff="누적"-->
+                        <!--android:text="누적"/>-->
+
+                    <!--<ToggleButton-->
+                        <!--android:layout_width="60dip"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textOn="가용"-->
+                        <!--android:textOff="가용"-->
+                        <!--android:text="가용"/>-->
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_user_point"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="포인트 0000 원" />
+
+                    <TextView
+                        android:id="@+id/text_user_stemp"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="스탬프 0000 개" />
+
+                    <TextView
+                        android:id="@+id/text_user_game"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="경품승점 0000 점" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_component"
+            android:layout_width="match_parent"
+            android:layout_height="20dip"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+            <!--android:layout_height="57dip"-->
+            <TextView
+                android:id="@+id/tv_copyright"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:textColor="@color/color_red"
+                android:gravity="center"
+                android:text="Copyright 2018 AllPOINTEC Co,ltd rights Reserved"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_component"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View style="@style/line_gray_w" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:padding="10dip">
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/btn_help"-->
+                                <!--android:layout_width="0dip"-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:layout_height="100dip"-->
+                                <!--android:src="@drawable/ic_help" />-->
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/btn_find_store"-->
+                                <!--android:layout_width="0dip"-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:layout_height="100dip"-->
+                                <!--android:src="@drawable/ic_find_store" />-->
+
+                            <LinearLayout
+                                android:id="@+id/btn_intro"
+                                android:layout_width="0dip"
+                                android:layout_weight="1"
+                                android:layout_height="100dip"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dip"
+                                    android:src="@drawable/img_introduce"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dip"
+                                    android:gravity="center"
+                                    android:textColor="@color/color_toolbar"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:text="소개" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/btn_find_store"
+                                android:layout_width="0dip"
+                                android:layout_weight="1"
+                                android:layout_height="100dip"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dip"
+                                    android:src="@drawable/img_findstore"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dip"
+                                    android:gravity="center"
+                                    android:textColor="@color/color_toolbar"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:text="가맹점 찾기" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:padding="10dip">
+
+                            <LinearLayout
+                                android:id="@+id/btn_check_use_mypoint"
+                                android:layout_width="0dip"
+                                android:layout_weight="1"
+                                android:layout_height="100dip"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dip"
+                                    android:src="@drawable/img_findbonus"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dip"
+                                    android:gravity="center"
+                                    android:textColor="@color/color_toolbar"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:text="여기,내 가용 보너스 조회" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/btn_mypage"
+                                android:layout_width="0dip"
+                                android:layout_weight="1"
+                                android:layout_height="100dip"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dip"
+                                    android:src="@drawable/img_mypage"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dip"
+                                    android:gravity="center"
+                                    android:textColor="@color/color_toolbar"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:text="마이 페이지" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:padding="10dip">
+
+                            <LinearLayout
+                                android:id="@+id/btn_event"
+                                android:layout_width="0dip"
+                                android:layout_weight="1"
+                                android:layout_height="100dip"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dip"
+                                    android:src="@drawable/img_events"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dip"
+                                    android:gravity="center"
+                                    android:textColor="@color/color_toolbar"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:text="이벤트" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/btn_cusomer"
+                                android:layout_width="0dip"
+                                android:layout_weight="1"
+                                android:layout_height="100dip"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dip"
+                                    android:src="@drawable/img_faq"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dip"
+                                    android:gravity="center"
+                                    android:textColor="@color/color_toolbar"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:text="고객센터" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

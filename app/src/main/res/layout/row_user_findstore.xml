@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip">
+
+    <View
+        style="@style/line_gray_w"
+        android:background="#ddd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="6dip"
+        android:paddingBottom="6dip"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip">
+
+        <ImageView
+            android:id="@+id/tv_findstore_list_thumb"
+            android:layout_width="80dip"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:padding="3dip"/>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="6dip">
+
+            <TextView
+                android:id="@+id/tv_findstore_list_storename"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/color_1e91d4"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_findstore_list_kinds"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/color_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_findstore_list_address"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/color_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_findstore_list_user_evaluation_phone"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/color_black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120dip"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="6dip">
+
+            <TextView
+                android:id="@+id/tv_findstore_list_point"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_alignParentRight="true"
+                android:text="p : 2500"
+                android:textColor="@color/color_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_findstore_list_stamp"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_alignParentRight="true"
+                android:text="s : 35"
+                android:textColor="@color/color_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_findstore_list_use"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="사용하기"
+                android:textColor="@color/color_toolbar"
+                android:background="@drawable/rect_toolbar_radius"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

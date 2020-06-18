@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="20dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="10dip">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nscv_find_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/find_map_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader
+                    android:id="@+id/find_map_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|top">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingBottom="20dip"
+                        android:paddingLeft="15dip"
+                        android:paddingRight="15dip"
+                        android:paddingTop="10dip">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dip"
+                            android:paddingBottom="5dip"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/btn_findmap_header_findstore_lbs"
+                                android:layout_width="160dip"
+                                android:layout_height="30dip"
+                                android:background="@drawable/rect_toolbar_radius"
+                                android:gravity="center"
+                                android:text="현재 위치 자동 검색"
+                                android:textColor="@color/color_toolbar" />
+
+                            <View
+                                android:layout_width="10dip"
+                                android:layout_height="match_parent" />
+
+                            <TextView
+                                android:id="@+id/btn_findmap_header_findstore_map"
+                                android:layout_width="100dip"
+                                android:layout_height="30dip"
+                                android:background="@drawable/rect_toolbar_radius"
+                                android:gravity="center"
+                                android:text="지도 검색"
+                                android:textColor="@color/color_toolbar" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:background="@drawable/border"
+                                android:padding="10dip">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dip"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="30dip"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="KR"/>
+
+                                    <android.support.design.widget.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="단말기 SN"
+                                        android:textColorHint="@color/color_999">
+
+                                        <android.support.design.widget.TextInputEditText
+                                            android:id="@+id/edit_findmap_header_store_serial"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="numberDecimal"
+                                            android:textColor="@color/color_333"
+                                            android:textSize="14sp" />
+                                    </android.support.design.widget.TextInputLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dip"
+                                    android:orientation="horizontal">
+
+                                    <android.support.design.widget.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="가맹점 명"
+                                        android:textColorHint="@color/color_999">
+
+                                        <android.support.design.widget.TextInputEditText
+                                            android:id="@+id/edit_findmap_header_store_name"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="text"
+                                            android:textColor="@color/color_333"
+                                            android:textSize="14sp" />
+                                    </android.support.design.widget.TextInputLayout>
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dip" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <Spinner
+                                        android:id="@+id/spinner_findmap_header_find_store_city"
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_height="30dip"/>
+
+                                    <Spinner
+                                        android:id="@+id/spinner_findmap_header_find_store_state"
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_height="30dip"/>
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dip" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dip"
+                                    android:orientation="horizontal">
+
+                                    <Spinner
+                                        android:id="@+id/spinner_findmap_header_find_store_bounus_type"
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_height="30dip"/>
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dip" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dip"
+                                    android:orientation="horizontal">
+
+                                    <Spinner
+                                        android:id="@+id/spinner_findmap_header_find_store_business_type"
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_height="30dip"/>
+
+                                    <Spinner
+                                        android:id="@+id/spinner_findmap_header_find_store_business_detail"
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_height="30dip"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dip" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/btn_findmap_header_find_store"
+                                android:layout_width="100dip"
+                                android:layout_height="30dip"
+                                android:background="@drawable/rect_toolbar_radius"
+                                android:gravity="center"
+                                android:text="검색"
+                                android:textColor="@color/color_toolbar" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dip" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/map_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dip">
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader>
+
+                <TextView
+                    android:id="@+id/findmap_header_empty_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="상세 목록"
+                    android:textColor="@color/color_666"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

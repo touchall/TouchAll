@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">1095509856961-o53vjh5ad7rlau5tmd00nqh1s6o2v5qb.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://touchall-allpointec.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1095509856961</string>
+    <string name="google_api_key" translatable="false">AIzaSyCc7MbwGikD2G6Se-zUlPUMUKdanJhUPAg</string>
+    <string name="google_app_id" translatable="false">1:1095509856961:android:8ca4476a72438729</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCc7MbwGikD2G6Se-zUlPUMUKdanJhUPAg</string>
+    <string name="google_storage_bucket" translatable="false">touchall-allpointec.appspot.com</string>
+    <string name="project_id" translatable="false">touchall-allpointec</string>
+</resources>

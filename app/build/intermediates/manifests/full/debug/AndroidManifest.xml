@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="allpointech.touchall"
+    android:versionCode="22"
+    android:versionName="1.2.2" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- SJH : wake lock 추가 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- map permission -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- NFC permission -->
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.NFC" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.1" />
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="allpointech.touchall.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="allpointech.touchall.permission.C2D_MESSAGE" />
+
+    <application
+        android:name="allpointech.touchall.AppInfo"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar" >
+        <activity
+            android:name="allpointech.touchall.intro.IntroActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="allpointech.touchall.login.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- User -->
+        <activity
+            android:name="allpointech.touchall.user.UserMainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="device_serial/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="allpointech.touchall.user.mypoint.Franchisee.CheckFranchiseeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="allpointech.touchall.user.mypoint.processPoint.InsertPointActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.VIEW"/> -->
+
+
+            <!-- <category android:name="android.intent.category.DEFAULT"/> -->
+            <!-- <category android:name="android.intent.category.BROWSABLE"/> -->
+
+
+            <!-- <data android:scheme="http" android:host="*touchall.co.kr" android:pathPrefix="/point_save_form"/> -->
+            <!-- <data android:scheme="https" android:host="*touchall.co.kr" android:pathPrefix="/point_save_form"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name="allpointech.touchall.user.mypoint.processPoint.CancelPointActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="allpointech.touchall.user.setup.DeviceSetupResultActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="allpointech.touchall.user.mypoint.CheckMyPointDetail.CheckMyPointDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="allpointech.touchall.login.ShowAgreeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="allpointech.touchall.user.info.UserInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="allpointech.touchall.setting.SettingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- SJH -->
+
+
+        <!-- permission check -->
+        <activity
+            android:name="allpointech.touchall.utils.TNPermissionCheck"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 서비스 태그 추가 -->
+        <service android:name="allpointech.touchall.network.fcm.FcmMessageService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="allpointech.touchall.network.fcm.FcmInstanceIDService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- GCM -->
+        <!-- <service android:name=".network.gcm.GcmIntentService" /> -->
+
+
+        <!-- <receiver -->
+        <!-- android:name=".network.gcm.GcmBroadcastReceiver" -->
+        <!-- android:permission="com.google.android.c2dm.permission.SEND"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.android.c2dm.intent.RECEIVE" /> -->
+
+
+        <!-- <category android:name="allpointech.touchall" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- GCM -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.gms.version" -->
+        <!-- android:value="@integer/google_play_services_version" /> -->
+        <!-- fabric -->
+        <!-- <meta-data -->
+        <!-- android:name="io.fabric.ApiKey" -->
+        <!-- android:value="35dd02ac150d2b543f6b56164cb526fa92b152fc" /> -->
+        <!-- daum map -->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="6f504f9b73ad280372b2aff0036b6f32" />
+
+        <!--
+         FirebaseMessagingService performs security checks at runtime,
+             no need for explicit permissions despite exported="true"
+        -->
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:enabled="true"
+            android:permission="android.permission.INSTALL_PACKAGES" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="allpointech.touchall" />
+            </intent-filter>
+        </receiver>
+        <!--
+ Internal (not exported) receiver used by the app to start its own exported services
+             without risk of being spoofed.
+        -->
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
+            android:exported="false" />
+        <!--
+ FirebaseInstanceIdService performs security checks at runtime,
+             no need for explicit permissions despite exported="true"
+        -->
+        <service
+            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="allpointech.touchall.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>
