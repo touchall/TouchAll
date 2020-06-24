@@ -163,7 +163,7 @@ public class FindPasswordFragment extends BaseFragment implements View.OnClickLi
             return false;
         }
 //        if (mbInjeonOk == false) {
-//            showToast("본인 인증이 필요합니다.");
+//            showToast("본인 인증이 필요합니다.");;
 //            return false;
 //        }
 
